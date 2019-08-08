@@ -1,0 +1,3 @@
+[submodule "grpc_client_pool"]
+	path = grpc_client_pool
+	url = git@github.com:bwisgood/grpc_client_pool.git
