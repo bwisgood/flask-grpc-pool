@@ -1,11 +1,11 @@
 from flask import Flask, jsonify
-from frame import FlaskGRPC
+from frame import FlaskGRPCPool
 
 from sample.company_pb2_grpc import CompanyServerStub
 from google.protobuf.empty_pb2 import Empty
 
 app = Flask(__name__)
-flask_grpc = FlaskGRPC(app)
+flask_grpc = FlaskGRPCPool(app)
 
 flask_grpc.register("company_connection", host="localhost", port=9100)
 
